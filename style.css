@@ -10,7 +10,7 @@
 body {
   background-color: orange;
   height: 100vh;
-  font-family: cursive;
+  font-family: Arial, Helvetica, sans-serif;
 }
 body .card {
   position: absolute;
@@ -114,6 +114,7 @@ body .card:hover div:nth-child(2) {
   }
   body .card .in p {
     font-size: 15px;
+    top: -55%;
   }
 }
 

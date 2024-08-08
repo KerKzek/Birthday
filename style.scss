@@ -10,7 +10,7 @@
 body {
     background-color: orange;
     height: 100vh;
-    font-family: cursive;
+      font-family:Arial, Helvetica, sans-serif;
 
     .card {
         position: absolute;
@@ -141,6 +141,7 @@ body {
             .in {
                 p {
                     font-size: 15px;
+                    top: -55%;
 
                 }
             }
