@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.full {
+    width: 100%;
+}
+
+body {
+    background-color: orange;
+    height: 100vh;
+    font-family: cursive;
+
+    .card {
+        position: absolute;
+        right: 50%;
+        top: 10%;
+        transition: all 1s;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+
+        div {
+            border: 1px solid;
+            position: absolute;
+            width: 300px;
+            height: 500px;
+            transition: all 1s;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        div:nth-child(1) {
+            background: linear-gradient(to right, #e0e0e0, #fff 30%);
+        }
+
+        div:nth-child(2) {
+            z-index: 1;
+            transform-origin: left;
+            background: linear-gradient(to left, #e0e0e0, #fff 30%);
+        }
+
+        .out {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            transform: rotateX(0deg);
+            text-align: center;
+
+            .back {
+                position: absolute;
+                z-index: -1;
+
+            }
+
+            p {
+                text-transform: uppercase;
+                font-size: 30px;
+                z-index: 1;
+                position: relative;
+                top: 20%;
+            }
+
+            .cake {
+                position: relative;
+                top: 30%;
+                width: 50%;
+            }
+
+            .flags {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: -30%;
+            }
+
+            .circle {
+                position: absolute;
+                width: 90%;
+                left: 5%;
+                top: 38%;
+            }
+
+            .back2 {
+                z-index: -1;
+                position: absolute;
+            }
+        }
+
+        .in {
+            .img1 {
+                display: inline;
+                width: 100%;
+                left: 0;
+            }
+
+            .img2 {
+                width: 35%;
+                position: relative;
+            }
+
+            .img3 {
+                width: 35%;
+                display: block;
+                height: 25%
+            }
+
+            p {
+                position: relative;
+                top: -60%;
+                width: 60%;
+                right: -40%;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .card:hover {
+        transform: rotate(-5deg);
+
+        div:nth-child(2) {
+            transform: rotateY(-180deg);
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .card {
+            top: 20%;
+
+            div {
+                width: 150px;
+                height: 300px;
+            }
+
+            .out {
+                p {
+                    font-size: 15px;
+                }
+            }
+
+            .in {
+                p {
+                    font-size: 15px;
+
+                }
+            }
+        }
+    }
+
+}
+.arrow {
+    width: 80%;
+    transform: rotateZ(-80deg);
+}
+aside {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    top: 75%;
+    width: 10%;
+    left: 15%;
+
+    // border: 1px solid;
+
+
+
+}
+
+@media screen and (max-width:700px) {
+    aside{
+        width: 20%;
+    }
+    .arrow{
+        transform: rotateZ(-100deg);
+
+    }
+}
