@@ -18,6 +18,7 @@ body .card {
   top: 10%;
   transition: all 1s;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   will-change: transform;
 }
 body .card div {
@@ -28,6 +29,7 @@ body .card div {
   transition: all 1s;
   -webkit-transition: all 1s;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 body .card div:nth-child(1) {
   background: linear-gradient(to right, #e0e0e0, #fff 30%);

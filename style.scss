@@ -17,8 +17,8 @@ body {
         right: 50%;
         top: 10%;
         transition: all 1s;
-        -webkit-transform-style: preserve-3d;
         transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
         will-change: transform;
     
         div {
@@ -28,8 +28,8 @@ body {
             height: 500px;
             transition: all 1s;
             -webkit-transition: all 1s;
-            -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
         }
     
         div:nth-child(1) {
