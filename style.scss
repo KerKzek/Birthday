@@ -10,9 +10,9 @@
 body {
     background-color: orange;
     height: 100vh;
-      font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
-      .card {
+    .card {
         position: absolute;
         right: 50%;
         top: 10%;
@@ -20,7 +20,7 @@ body {
         transform-style: preserve-3d;
         -webkit-transform-style: preserve-3d;
         will-change: transform;
-    
+
         div {
             border: 1px solid;
             position: absolute;
@@ -29,22 +29,27 @@ body {
             transition: all 1s;
             -webkit-transition: all 1s;
         }
-    
+
         div:nth-child(1) {
             background: linear-gradient(to right, #e0e0e0, #fff 30%);
         }
-    
+
         div:nth-child(2) {
             z-index: 1;
             transform-origin: left;
             -webkit-transform-origin: left;
             background: linear-gradient(to left, #e0e0e0, #fff 30%);
         }
-    
+
         .out {
             transform: rotateX(0deg);
             text-align: center;
-    
+
+            * {
+                opacity: 1;
+                
+            }
+
             .back {
                 position: absolute;
                 z-index: -10;
@@ -52,7 +57,7 @@ body {
                 height: 100%;
                 background-color: #fff;
             }
-    
+
             p {
                 text-transform: uppercase;
                 font-size: 30px;
@@ -67,56 +72,58 @@ body {
                 -moz-background-clip: text;
                 color: transparent;
             }
-    
+
             .cake {
                 position: relative;
                 // top: 30%;
                 margin-top: 170px;
                 width: 50%;
             }
+
             @media screen and (max-width:768px) {
-                .cake{
+                .cake {
                     margin-top: 100px;
                 }
             }
+
             .flags {
                 position: absolute;
                 width: 100%;
                 left: 0;
                 top: -30%;
             }
-    
+
             .circle {
                 position: absolute;
                 width: 90%;
                 left: 5%;
                 top: 38%;
             }
-    
+
             .back2 {
                 z-index: -1;
                 position: absolute;
             }
         }
-    
+
         .in {
             .img1 {
                 display: inline;
                 width: 100%;
                 left: 0;
             }
-    
+
             .img2 {
                 width: 35%;
                 position: relative;
             }
-    
+
             .img3 {
                 width: 35%;
                 display: block;
                 height: 25%;
             }
-    
+
             p {
                 position: relative;
                 top: -60%;
@@ -124,34 +131,48 @@ body {
                 right: -40%;
                 font-size: 1.5rem;
             }
+
         }
     }
-    
+
     .card:hover {
         transform: rotate(-5deg);
         -webkit-transform: rotate(-5deg);
-    
+
+        .out {
+            * {
+                animation: disappear 1s linear forwards;
+            }
+        }
+
         div:nth-child(2) {
             transform: rotateY(-180deg);
             -webkit-transform: rotateY(-180deg);
         }
     }
-    
+    .card:not(:hover){
+        .out {
+            * {
+                animation: appear 1s linear forwards;
+            }
+        }
+    }
+
     @media screen and (max-width:768px) {
         .card {
             top: 20%;
-    
+
             div {
                 width: 150px;
                 height: 300px;
             }
-    
+
             .out {
                 p {
                     font-size: 15px;
                 }
             }
-    
+
             .in {
                 p {
                     font-size: 15px;
@@ -160,12 +181,13 @@ body {
             }
         }
     }
-    
+
     .arrow {
         width: 80%;
         transform: rotateZ(-80deg);
         -webkit-transform: rotateZ(-80deg);
     }
+
     aside {
         display: flex;
         align-items: flex-end;
@@ -174,15 +196,47 @@ body {
         width: 10%;
         left: 15%;
     }
-    
+
     @media screen and (max-width:700px) {
         aside {
             width: 20%;
         }
-    
+
         .arrow {
             transform: rotateZ(-100deg);
             -webkit-transform: rotateZ(-100deg);
         }
+    }
+}
+
+@keyframes appear {
+
+    0% {
+        opacity: 0;
+    }
+    29%{
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+
+    0% {
+        opacity: 1;
+    }
+    29%{
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
     }
 }
