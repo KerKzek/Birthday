@@ -65,12 +65,12 @@ body .card .out p {
 }
 body .card .out .cake {
   position: relative;
-  margin-top: 55%;
+  margin-top: 170px;
   width: 50%;
 }
 @media screen and (max-width: 768px) {
   body .card .out .cake {
-    margin-top: 80%;
+    margin-top: 100px;
   }
 }
 body .card .out .flags {
