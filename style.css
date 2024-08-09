@@ -65,8 +65,13 @@ body .card .out p {
 }
 body .card .out .cake {
   position: relative;
-  top: 30%;
+  margin-top: 55%;
   width: 50%;
+}
+@media screen and (max-width: 768px) {
+  body .card .out .cake {
+    margin-top: 80%;
+  }
 }
 body .card .out .flags {
   position: absolute;
